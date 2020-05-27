@@ -38,7 +38,7 @@ def check_regex_sentences(line):
     property = ""
     entity = ""
     type = ""
-    if (re.search('(.*?) (.*?) (a |the ){0,1}(.*?)($|\?| \?)', line)):
+    if re.search('(.*?) (.*?) (a |the ){0,1}(.*?)($|\?| \?)', line):
         # Read the sentence with use of regex
         m = re.search('(.*?) (.*?) (a |the ){0,1}(.*?)($|\?| \?)', line)
         # filter the property and the entity

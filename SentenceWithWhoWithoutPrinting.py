@@ -49,6 +49,7 @@ def check_regex_sentences(line):
 
     return property, entity, type
 
+
 def get_keywords_who(parse):
     entity = ""
     property = ""

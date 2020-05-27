@@ -166,7 +166,7 @@ def line_handler(line):
             propIDs = get_id(prop, True)
         if entity != "":
             entityIDs = get_id(entity, False)
-        if found_property and found_entity and (propIDs == 0 or entityIDs == 0):
+        if propIDs == 0 or entityIDs == 0:
             return
 
         for entityID in entityIDs:

@@ -49,14 +49,9 @@ def check_regex_sentences(line):
 
     return property, entity, type
 
-
-# finds the keywords for 3 different kinds of sentences
-def get_keywords(line):
-    nlp = spacy.load('en_core_web_sm')
-    parse = nlp(line.strip())
+def get_keywords_who(parse):
     entity = ""
     property = ""
-    type = parse[0]
     for token in parse:
         # Als de zin begint met Who
         if type == "Who":
@@ -70,6 +65,17 @@ def get_keywords(line):
                 entity = get_blank(token, "dobj")
             if token.pos_ == "VERB":
                 property = token.lemma_
+
+    return property, entity, "Who"
+
+
+# finds the keywords for 3 different kinds of sentences
+def get_keywords(line):
+    nlp = spacy.load('en_core_web_sm')
+    parse = nlp(line.strip())
+    type = parse[0]
+    if type == "Who":
+        return get_keywords_who(parse)
 
     return property, entity, type
 

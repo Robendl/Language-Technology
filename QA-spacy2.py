@@ -67,14 +67,28 @@ def get_keywords(line):
     return nsubj, pobj, type
 
 def generate_query(prop, entity, type):
+    #Hier moeten de andere queries komen.   
     #If first_word is of type "who".
     if(type.text == "Who"):
         query = '''SELECT ?answerLabel WHERE {
             wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-            ?answer wdt:P31 wd:Q5.
             SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
         }'''
-    #Hier moeten de andere queries komen.    
+    if(type.text == "When"):
+        #query = '''SELECT ?answerLabel WHERE {
+        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
+        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+        #}'''
+    if(type.text == "Where"):
+        #query = '''SELECT ?answerLabel WHERE {
+        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
+        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+        #}'''
+    if(type.text == "Which"):
+        #query = '''SELECT ?answerLabel WHERE {
+        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
+        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+        #}''' 
     else:
         query = '''SELECT ?answerLabel WHERE {
             wd:''' + entity + ' wdt:' + prop + ''' ?answer.  

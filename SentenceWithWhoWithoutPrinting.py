@@ -55,17 +55,16 @@ def get_keywords_who(parse):
     property = ""
     for token in parse:
         # Als de zin begint met Who
-        if type == "Who":
-            if token.dep_ == "pobj":
-                entity = get_blank(token, "pobj")
-            if token.dep_ == "poss":
-                entity = get_blank(token, "poss")
-            if token.dep_ == "attr":
-                property = get_blank(token, "attr")
-            if token.dep_ == "dobj":
-                entity = get_blank(token, "dobj")
-            if token.pos_ == "VERB":
-                property = token.lemma_
+        if token.dep_ == "pobj":
+            entity = get_blank(token, "pobj")
+        if token.dep_ == "poss":
+            entity = get_blank(token, "poss")
+        if token.dep_ == "attr":
+            property = get_blank(token, "attr")
+        if token.dep_ == "dobj":
+            entity = get_blank(token, "dobj")
+        if token.pos_ == "VERB":
+            property = token.lemma_
 
     return property, entity, "Who"
 
@@ -74,11 +73,9 @@ def get_keywords_who(parse):
 def get_keywords(line):
     nlp = spacy.load('en_core_web_sm')
     parse = nlp(line.strip())
-    type = parse[0]
+    type = parse[0].text
     if type == "Who":
         return get_keywords_who(parse)
-
-    return property, entity, type
 
 
 def generate_query(prop, entity, type):

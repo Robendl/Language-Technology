@@ -54,49 +54,22 @@ def get_keywords(line):
             root = token.lemma_
         first_word = False
 
-    if dobj:
-        pobj = dobj
-    if parse[0].dep_ == "attr":
-        return nsubj, pobj, type
+    one = "keyword_one"
+    two = "keyword_two"
 
-    if parse[0].dep_ == "nsubj":
-        return root, pobj, type
-
-    if parse[0].dep_ == "advmod":
-        return root, nsubj, type
+    if "when":
+        query = gequery(one, two);
+        query
 
     return nsubj, pobj, type
 
-def generate_query(prop, entity, type):
-    #Hier moeten de andere queries komen.   
-    #If first_word is of type "who".
-    if(type.text == "Who"):
-        query = '''SELECT ?answerLabel WHERE {
-            wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-        }'''
-    if(type.text == "When"):
-        #query = '''SELECT ?answerLabel WHERE {
-        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-        #}'''
-    if(type.text == "Where"):
-        #query = '''SELECT ?answerLabel WHERE {
-        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-        #}'''
-    if(type.text == "Which"):
-        #query = '''SELECT ?answerLabel WHERE {
-        #    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-        #    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-        #}''' 
-    else:
-        query = '''SELECT ?answerLabel WHERE {
-            wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-        }'''
+def generate_query(prop, entity):
+    query = '''SELECT ?answerLabel WHERE {
+    wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }'''
 
     return query
+
 
 # generates a query and executes it, returns false if it didn't print an answer and true if it did.
 def execute_query(prop, entity, type):
@@ -135,7 +108,7 @@ def my_questions():
 # This function gets an array of possible IDs and tries to get answers with them.
 # It will keep trying new IDs until it gets an answer or until there are no more possible IDs.
 def line_handler(line):
-    prop, entity, type = get_keywords(line)
+    get_keywords(line)
     propIDs = get_id(prop, True)
     entityIDs = get_id(entity, False)
     if propIDs == 0 or entityIDs == 0:

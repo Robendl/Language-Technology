@@ -68,6 +68,37 @@ def get_keywords_who(parse):
 
     return property, entity, "Who"
 
+def get_keywords_when(parse):
+    entity = ""
+    property = ""
+    for token in parse:
+        print(token.text, token.dep_)
+        # Als de zin begint met When
+        if token.dep_ == "pobj":
+            entity = get_blank(token, "pobj")
+        if token.dep_ == "nsubj":
+            entity = get_blank(token, "nsubj")
+        if token.dep_ == "nsubjpass":
+            entity = get_blank(token, "nsubjpass")
+            print(entity)
+        if token.dep_ == "attr":
+            property = get_blank(token, "attr")
+        if token.dep_ == "dobj":
+            entity = get_blank(token, "dobj")
+        if token.pos_ == "VERB":
+            if token.text.endswith('ed'):
+                property = token.lemma_
+            else:
+                property = token.text
+            
+    print(token.lemma_)
+    print(entity)
+
+    for token in parse:
+        print("\t".join((token.text, token.lemma_, token.pos_,
+        token.dep_, token.head.lemma_)))
+    return property, entity, "When"
+
 
 # finds the keywords for 3 different kinds of sentences
 def get_keywords(line):
@@ -76,14 +107,22 @@ def get_keywords(line):
     type = parse[0].text
     if type == "Who":
         return get_keywords_who(parse)
+    if type == "When":
+        return get_keywords_when(parse)
 
 
 def generate_query(prop, entity, type):
     # If first_word is of type "who".
-    if (type == "Who"):
+    if type == "Who":
         query = '''SELECT ?answerLabel WHERE {
             wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
             ?answer wdt:P31 wd:Q5.
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+        }'''
+    # If first_word is of type "when".
+    if type == "When":
+        query = '''SELECT ?answerLabel WHERE {
+            wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
             SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
         }'''
     # If type is regex1 (Who/What (is/was/were) (Albert Einstein/The Beatles)?)
@@ -142,6 +181,8 @@ def line_handler(line):
     prop, entity, type = get_keywords(line)
     found_entity = False
     found_property = False
+    print(prop)
+    print(entity)
     if prop != "":
         found_property = True
         propIDs = get_id(prop, True)
@@ -167,7 +208,7 @@ def line_handler(line):
         if entity != "":
             entityIDs = get_id(entity, False)
         if propIDs == 0 or entityIDs == 0:
-            return
+            pass
 
         for entityID in entityIDs:
             answer += execute_query(None, entityID['id'], type)
@@ -180,11 +221,11 @@ def line_handler(line):
 
 
 def main():
-    questions = my_questions()
-    for line in questions:
-        print(line)
+    with open("all_questions.txt") as fl:
+        file_contents = [x.rstrip() for x in fl]
 
-    for line in fileinput.input():
+    for line in file_contents:
+        print(line)
         line_handler(line)
 
 

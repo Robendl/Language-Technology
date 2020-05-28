@@ -80,7 +80,6 @@ def get_keywords_when(parse):
             entity = get_blank(token, "nsubj")
         if token.dep_ == "nsubjpass":
             entity = get_blank(token, "nsubjpass")
-            print(entity)
         if token.dep_ == "attr":
             property = get_blank(token, "attr")
         if token.dep_ == "dobj":
@@ -116,7 +115,6 @@ def generate_query(prop, entity, type):
     if type == "Who":
         query = '''SELECT ?answerLabel WHERE {
             wd:''' + entity + ' wdt:' + prop + ''' ?answer.  
-            ?answer wdt:P31 wd:Q5.
             SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
         }'''
     # If first_word is of type "when".
@@ -198,6 +196,8 @@ def line_handler(line):
         for entityID in entityIDs:
             for propID in propIDs:
                 answer += execute_query(propID['id'], entityID['id'], type)
+                if answer >= 1:
+                    break
             if answer >= 1:
                 break
 
@@ -209,12 +209,15 @@ def line_handler(line):
             entityIDs = get_id(entity, False)
         if propIDs == 0 or entityIDs == 0:
             pass
+    
+        if entityIDs == 0:
+            pass
+        else:
+            for entityID in entityIDs:
+                answer += execute_query(None, entityID['id'], type)
 
-        for entityID in entityIDs:
-            answer += execute_query(None, entityID['id'], type)
-
-            if answer >= 1:
-                break
+                if answer >= 1:
+                    break
 
     if answer == 0:
         print("No answer could be found")

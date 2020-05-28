@@ -1,3 +1,8 @@
+When did John Conway die? 
+When did the black plague begin? 
+When did the universe begin? 
+When did Alexander Graham Bell die? 
+When was tungsten first discovered? 
 When was Alan Turing born? 
 When was Albert Einstein born? 
 When was Conway's game of life launched? 
@@ -5,24 +10,42 @@ When was Donald Trump born?
 When was Earth formed? 
 When was Einstein born? 
 When was gold discovered? 
-When was Hangul invented? 
 When was Isaac Newton born? 
 When was Marie Curie born? 
-When was mitochondrial DNA discovered? 
+When was mitochondrial DNA discovered?
+When Apple Inc. was founded 
 When was Myrtle Bachelder born? 
 When was oxygen discovered? 
 When was penicilin discovered? 
 When was penicillin discovered? 
 When was penicillin invented? 
 When was pluto discovered? 
-When was pluto disqualified as a planet? 
 When was Pluto first discovered? 
 When was plutonium discovered? 
 When was Sir Isaac Newton born ? 
-When was the birthday of Charles Darwin? 
-When was the Chernobyl disaster? 
-When was the chip invented? 
+When was the chip invented?
+When is the telephone invented?
 When was the Doppler effect discovered? 
+When was the International Space Station launched? 
+When was the internet established? 
+When was the mobile phone invented? 
+When was the Nobel Prize established?
+When was the Higgs Boson discovered? 
+When was the Hubble Telescope launched?
+When was the telephone invented?  
+When was the transistor invented? 
+When was Uranus discovered?
+When was the internal combustion engine invented? 
+When was pluto disqualified as a planet? 
+When was the telescope invented?
+When was the Turing Award instituted?
+When was WiFi invented? 
+When was Windows Microsoft released? 
+When were axolotls discovered? 
+When were personal computers invented?
+When was Hangul invented?
+
+When was the mobile operating system 'android' made? 
 When was the first computer made? 
 When was the first flight of the Boeing 747? 
 When was the first moon landing? 
@@ -31,41 +54,14 @@ When was the first nobel prize in physiology or medicine awarded?
 When was the first nuclear explosion tested? 
 When was the first transistor constructed? 
 When was the first vaccine ever created? 
-When was the Higgs Boson discovered? 
-When was the Hubble Telescope launched? 
 When was the inception of Linux? 
-When was the internal combustion engine invented? 
-When was the International Space Station launched? 
-When was the internet established? 
-When was the mobile operating system 'android' made? 
-When was the mobile phone invented? 
-When was the Nobel Prize established? 
 When was the nobel prize in physics introduced? 
 When was the oldest university in the Netherlands founded? 
 When was the Philosophiae Naturalis Principia Mathematica written? 
 When was the programming language Python first released? 
-When was the telephone invented? 
-When was the telescope invented? 
-When was the transistor invented? 
-When was the Turing Award instituted? 
-When was tungsten first discovered? 
-When was Uranus discovered? 
-When was WiFi invented? 
-When was Windows Microsoft released? 
-When were axolotls discovered? 
-When were personal computers invented? 
 When were the first Nobel Prizes awarded? 
 When were the founders of Microsoft born?
-When Apple Inc. was founded 
-When did Alexander Graham Bell die? 
 When did Baroque music fall out of fashion? 
-When did Isaac Newton win the Knight Bachelor award? 
-When did John Conway die? 
-When did Stephen Hawking get his doctorate? 
-When did the big bang happen? 
-When did the Big Bang happen? 
-When did the Big Bang occur? 
-When did the black plague begin? 
 When did the first human land on the moon? 
 When did the ISS launch into space? 
 When did the planet Mars form? 
@@ -73,11 +69,17 @@ When did the specie Homo Neanderthalensis go extinct?
 When did the specie Homo Sapiens first appear on Earth? 
 When did the universe begin? 
 When did world war 1 end? 
-When is the telephone invented?
+When was the birthday of Charles Darwin? 
+When was the Chernobyl disaster? 
 How much is one Solar Mass, when converted to the international system (SI) unit for mass?
+When did Isaac Newton win the Knight Bachelor award? 
+When did Stephen Hawking get his doctorate? 
+When did the big bang happen? 
+When did the Big Bang happen? 
+When did the Big Bang occur? 
 #Until when was Pluto considered a planet? 
 #What age was Charles Darwin when he died? 
 #What university was Alan Turing a student of when he published his doctoral thesis? 
 #What was madame Curie's official first name when she was born? 
 #Which eclipse is it when the moon is between the sun and the earth?
-#Who invented the car and when? 
+#Who invented the car and when?

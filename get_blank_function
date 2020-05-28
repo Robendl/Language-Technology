@@ -1,0 +1,15 @@
+# returns the type of part of the sentence that is required
+def get_blank(token, type):
+    part = []
+    comp = True
+    for d in token.subtree:
+        #Nummod zodat hij Apollo 11 bijvoorbeeld goed scant. Amod is zodat hij wel bijvoeglijke naamwoorden meenement zoals atomic number.
+        if d.dep_ == type or (d.dep_ == "compound" and comp) or (d.dep_ == "nummod" and d.head.lemma_ == token.lemma_) or (d.dep_ == "amod" and d.head.lemma_ == token.lemma_):
+            if d.dep_ == type:
+                comp = False
+                part.append(d.lemma_)
+            #gedaan zodat hij bijvoorbeeld highest point niet high point van maakt maar gewoon highest point.
+            else:
+                part.append(d.text)
+    print(part)
+    return " ".join(part)

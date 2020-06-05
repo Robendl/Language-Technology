@@ -412,7 +412,7 @@ def line_handler(line):
             for entityID in entityIDs:
                 for propID in propIDs:
                     answer = execute_query(propID['id'], entityID['id'], type)
-                    if answer == 1:
+                    if answer >= 1:
                         return
 
     if answer == 0:

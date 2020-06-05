@@ -106,6 +106,32 @@ def get_keywords_who(parse):
 
     return property, entity, "Who"
 
+def get_keywords_which(parse):
+    entity = ""
+    property = ""
+    found_entity = False
+    found_property = False
+    for token in parse:
+        # Als de zin begint met When
+        if token.dep_ == "pobj":
+            entity = get_blank(token, "pobj")
+        if token.dep_ == "nsubj":
+            property = get_blank(token, "nsubj")
+        if token.dep_ == "nsubjpass":
+            property = get_blank(token, "nsubjpass")
+        if token.dep_ == "dobj":
+            entity = get_blank(token, "dobj")
+        if token.dep_ == "attr":
+            entity = get_blank(token, "attr")
+        if property == "":
+	        if token.dep_ == "VERB":
+	            property = token.lemma_
+        if entity == "":
+	        entity = get_blank(token, "nsubj")
+	        entity = get_blank(token, "nsubjpass")
+
+    print("prop={} ent={}".format(property, entity))
+    return property, entity, "Which"
 
 def get_keywords_what(parse):
     entity = ""
@@ -278,6 +304,8 @@ def get_keywords(line):
         return get_keywords_where(parse)
     if type == "When":
         return get_keywords_when(parse)
+    if type == "Which":
+        return get_keywords_which(parse)
     return get_keywords_what(parse)
 
 
@@ -394,16 +422,16 @@ def line_handler(line):
 
 
 def main():
-    questions = my_questions()
+    #questions = my_questions()
     #for line in questions:
     #    print(line)
 
-    for line in fileinput.input():
-        if line == "stop\n":
-            break
-        line_handler(line)
+    #for line in fileinput.input():
+    #    if line == "stop\n":
+    #        break
+    #    line_handler(line)
 
-    with open("questions.txt") as fl:
+    with open("all_questions.txt") as fl:
         file_contents = [x.rstrip() for x in fl]
 
     for line in file_contents:

@@ -404,9 +404,9 @@ def line_handler(line):
                     return
     if answer == 0:
         #bij sommige vragen moesten de woorden die als entity werden aangeschreven, property's worden en ook andersom. Om een goed antwoord te krijgen
-        if prop != "":
-            propIDs = get_id(entity, True)
         if entity != "":
+            propIDs = get_id(entity, True)
+        if prop != "":
             entityIDs = get_id(prop, False)
         if propIDs != 0 and entityIDs != 0:
             for entityID in entityIDs:

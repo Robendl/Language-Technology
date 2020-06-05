@@ -403,6 +403,7 @@ def line_handler(line):
                 if answer == 1:
                     return
     if answer == 0:
+        #bij sommige vragen moesten de woorden die als entity werden aangeschreven, property's worden en ook andersom. Om een goed antwoord te krijgen
         if prop != "":
             propIDs = get_id(entity, True)
         if entity != "":

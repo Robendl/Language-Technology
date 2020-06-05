@@ -402,6 +402,17 @@ def line_handler(line):
                     answer = execute_query(propID['id'], entityID['id'], "How many1")
                 if answer == 1:
                     return
+    if answer == 0:
+        if prop != "":
+            propIDs = get_id(entity, True)
+        if entity != "":
+            entityIDs = get_id(prop, False)
+        if propIDs != 0 and entityIDs != 0:
+            for entityID in entityIDs:
+                for propID in propIDs:
+                    answer = execute_query(propID['id'], entityID['id'], type)
+                    if answer == 1:
+                        return
 
     if answer == 0:
         prop, entity, type = check_regex_sentences(line)

@@ -18,7 +18,7 @@ def get_id(word, prop):
         print("Couldn't find any URI for: \'" + word + "\'")
         return 0
     else:
-        #for result in json['search']:
+        # for result in json['search']:
         #    print("{}\t{}".format(result['id'],result['label']))
         #    if 'description' in result.keys():
         #        print(result['description'])
@@ -30,12 +30,14 @@ def get_blank(token, type):
     part = []
     comp = True
     for d in token.subtree:
-        #Nummod zodat hij Apollo 11 bijvoorbeeld goed scant. Amod is zodat hij wel bijvoeglijke naamwoorden meenement zoals atomic number.
-        if d.dep_ == type or (d.dep_ == "compound" and comp) or (d.dep_ == "nummod" and d.head.lemma_ == token.lemma_) or (d.dep_ == "amod" and d.head.lemma_ == token.lemma_ and d.text != "many"):
+        # Nummod zodat hij Apollo 11 bijvoorbeeld goed scant. Amod is zodat hij wel bijvoeglijke naamwoorden meenement zoals atomic number.
+        if d.dep_ == type or (d.dep_ == "compound" and comp) or (
+                d.dep_ == "nummod" and d.head.lemma_ == token.lemma_) or (
+                d.dep_ == "amod" and d.head.lemma_ == token.lemma_ and d.text != "many"):
             if d.dep_ == type:
                 comp = False
                 part.append(d.lemma_)
-            #gedaan zodat hij bijvoorbeeld highest point niet high point van maakt maar gewoon highest point.
+            # gedaan zodat hij bijvoorbeeld highest point niet high point van maakt maar gewoon highest point.
             else:
                 part.append(d.text)
     return " ".join(part)
@@ -46,7 +48,7 @@ def check_regex_sentences(line):
     property = ""
     entity = ""
     type = ""
-    #What does DNA stand for? / What does REM sleep stand for? These questions need to be fully written out.
+    # What does DNA stand for? / What does REM sleep stand for? These questions need to be fully written out.
     if re.search('What does (a |the ){0,1}(.*?) stand for', line):
         m = re.search('What does (a |the ){0,1}(.*?) stand for', line)
         entity = m.group(2)
@@ -106,6 +108,7 @@ def get_keywords_who(parse):
 
     return property, entity, "Who"
 
+
 def get_keywords_which(parse):
     entity = ""
     property = ""
@@ -124,14 +127,15 @@ def get_keywords_which(parse):
         if token.dep_ == "attr":
             entity = get_blank(token, "attr")
         if property == "":
-	        if token.dep_ == "VERB":
-	            property = token.lemma_
+            if token.dep_ == "VERB":
+                property = token.lemma_
         if entity == "":
-	        entity = get_blank(token, "nsubj")
-	        entity = get_blank(token, "nsubjpass")
+            entity = get_blank(token, "nsubj")
+            entity = get_blank(token, "nsubjpass")
 
     print("prop={} ent={}".format(property, entity))
     return property, entity, "Which"
+
 
 def get_keywords_what(parse):
     entity = ""
@@ -146,7 +150,7 @@ def get_keywords_what(parse):
     return property, entity, "What"
 
 
-#For example What does DNA consist of?/ What does the Dijkstra algorithm solve?
+# For example What does DNA consist of?/ What does the Dijkstra algorithm solve?
 def get_keywords_what_does(parse):
     entity = ""
     property = ""
@@ -283,6 +287,20 @@ def get_keywords_how(parse):
     return property, entity, type
 
 
+def get_keywords_is(parse):
+    type = "Is"
+    entity = ""
+    property = ""
+
+    for token in parse:
+        if token.dep_ == "nsubj":
+            entity = get_blank(token, "nsubj")
+        if token.dep_ == "attr":
+            property = get_blank(token, "attr")
+
+    return property, entity, type
+
+
 # finds the keywords for 3 different kinds of sentences
 def get_keywords(line):
     nlp = spacy.load('en_core_web_sm')
@@ -290,7 +308,7 @@ def get_keywords(line):
     type = parse[0].text
 
     for token in parse:
-         print("\t".join((token.text, token.lemma_, token.pos_, token.dep_, token.head.lemma_)))
+        print("\t".join((token.text, token.lemma_, token.pos_, token.dep_, token.head.lemma_)))
 
     if type == "Who":
         return get_keywords_who(parse)
@@ -306,6 +324,9 @@ def get_keywords(line):
         return get_keywords_when(parse)
     if type == "Which":
         return get_keywords_which(parse)
+    if type == "Is":
+        return get_keywords_is(parse)
+
     return get_keywords_what(parse)
 
 
@@ -334,8 +355,13 @@ def generate_query(prop, entity, type):
         query = '''SELECT ?Alt WHERE {
             SERVICE wikibase:label {
                 bd:serviceParam wikibase:language "en" .
-                wd:'''+entity+''' skos:altLabel ?Alt .
+                wd:''' + entity + ''' skos:altLabel ?Alt .
                 }
+            }'''
+    elif type == "Is":
+        query = '''SELECT ?answerLabel WHERE {
+            wd:''' + entity + ' ?answer wd:' + prop + '''.
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
             }'''
     else:
         query = '''SELECT ?answerLabel WHERE {
@@ -364,20 +390,36 @@ def execute_query(prop, entity, type):
     return 1
 
 
-# functions that returns 10 questions I know my program can answer
-def my_questions():
-    return ("What are symptoms of COVID-19?",
-            "What was the disability of Stephen Hawking?",
-            "What was the goal of the Apollo space program?",
-            "What is the birth date of John Lennon?",
-            "Who influenced Nicolas Tesla",
-            "Who designed Fortran?",
-            "Who discovered penicillin?",
-            "Who invented the microscope?",
-            "Who invented the stethoscope?",
-            "When was pluto discovered?",
-            "When was gold discovered?",
-            "When was the chip invented?")
+def execute_yes_no_query(prop, entity):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    }
+    url = 'https://query.wikidata.org/sparql'
+    query = generate_query(prop, entity, "Is")
+    data = requests.get(url, headers=headers, params={'query': query, 'format': 'json'}).json()
+
+    if not data['results']['bindings']:
+        return False
+    return True
+
+
+def yes_no_query_handler(prop, entity):
+    propIDs = 0
+    entityIDs = 0
+    if prop != "":
+        propIDs = get_id(prop, False)
+    if entity != "":
+        entityIDs = get_id(entity, False)
+
+    answer = False
+    if propIDs != 0 and entityIDs != 0:
+        for entityID in entityIDs:
+            for propID in propIDs:
+                answer = execute_yes_no_query(propID['id'], entityID['id'], )
+                if answer:
+                    print("yes")
+                    return
+    print("no")
 
 
 # This function gets an array of possible IDs and tries to get answers with them.
@@ -385,6 +427,10 @@ def my_questions():
 def line_handler(line):
     prop, entity, type = get_keywords(line)
     print(prop, entity, type)
+
+    if type == "Is":
+        yes_no_query_handler(prop, entity)
+        return
 
     propIDs = 0
     entityIDs = 0
@@ -402,8 +448,9 @@ def line_handler(line):
                     answer = execute_query(propID['id'], entityID['id'], "How many1")
                 if answer == 1:
                     return
+
     if answer == 0:
-        #bij sommige vragen moesten de woorden die als entity werden aangeschreven, property's worden en ook andersom. Om een goed antwoord te krijgen
+        # bij sommige vragen moesten de woorden die als entity werden aangeschreven, property's worden en ook andersom. Om een goed antwoord te krijgen
         if entity != "":
             propIDs = get_id(entity, True)
         if prop != "":
@@ -434,11 +481,11 @@ def line_handler(line):
 
 
 def main():
-    #questions = my_questions()
-    #for line in questions:
+    # questions = my_questions()
+    # for line in questions:
     #    print(line)
 
-    #for line in fileinput.input():
+    # for line in fileinput.input():
     #    if line == "stop\n":
     #        break
     #    line_handler(line)
@@ -447,9 +494,10 @@ def main():
         file_contents = [x.rstrip() for x in fl]
 
     for line in file_contents:
-        print(line)
-        line_handler(line)
-        print()
+        if line.startswith("Is"):
+            print(line)
+            line_handler(line)
+            print()
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ def get_id(word, prop):
     params['search'] = word.rstrip()
     json = requests.get(url, params).json()
     if not json['search']:
-        print("Couldn't find any URI for: \'" + word + "\'")
+        # print("Couldn't find any URI for: \'" + word + "\'")
         return 0
     else:
         # for result in json['search']:
@@ -314,8 +314,8 @@ def get_keywords(line):
     parse = nlp(line.strip())
     type = parse[0].text
 
-    for token in parse:
-        print("\t".join((token.text, token.lemma_, token.pos_, token.dep_, token.head.lemma_)))
+    # for token in parse:
+    #    print("\t".join((token.text, token.lemma_, token.pos_, token.dep_, token.head.lemma_)))
 
     if type == "Who":
         return get_keywords_who(parse)
@@ -333,6 +333,8 @@ def get_keywords(line):
         return get_keywords_which(parse)
     if type == "Is" or type == "Are":
         return get_keywords_is(parse)
+    if type == "Did":
+        return 0, 0, "yes"
 
     return get_keywords_what(parse)
 
@@ -390,10 +392,13 @@ def execute_query(prop, entity, type):
 
     if not data['results']['bindings']:
         return 0
-    print(query)
+
+    file = open("answers.txt", "a")
+
     for item in data['results']['bindings']:
         for var in item:
-            print(item[var]['value'])
+            file.write("    " + item[var]['value'])
+    file.close()
     return 1
 
 
@@ -419,21 +424,31 @@ def yes_no_query_handler(prop, entity):
         entityIDs = get_id(entity, False)
 
     answer = False
+    file = open("answers.txt", "a")
+
     if propIDs != 0 and entityIDs != 0:
         for entityID in entityIDs:
             for propID in propIDs:
                 answer = execute_yes_no_query(propID['id'], entityID['id'], )
                 if answer:
-                    print("yes")
+                    file.write("    yes")
+                    file.close()
                     return
-    print("no")
+    file.write("    no")
+    file.close()
 
 
 # This function gets an array of possible IDs and tries to get answers with them.
 # It will keep trying new IDs until it gets an answer or until there are no more possible IDs.
 def line_handler(line):
     prop, entity, type = get_keywords(line)
-    print(prop, entity, type)
+    # print(prop, entity, type)
+
+    if type == "yes":
+        file = open("answers.txt", "a")
+        file.write("    yes")
+        file.close()
+        return
 
     if type == "Is":
         yes_no_query_handler(prop, entity)
@@ -488,19 +503,19 @@ def line_handler(line):
 
 
 def main():
-    for line in fileinput.input():
-        if line == "stop\n":
-            break
-        line_handler(line)
-
-    with open("all_questions.txt") as fl:
+    with open("questionFormat.txt") as fl:
         file_contents = [x.rstrip() for x in fl]
 
     for line in file_contents:
-        if line.startswith("Is") or line.startswith("Are"):
-            print(line)
-            line_handler(line)
-            print()
+        number = line.split()[0]
+        new_line = re.sub(r'\d+ +', '', line)
+        file = open("answers.txt", "a")
+        file.write(number)
+        file.close()
+        line_handler(new_line)
+        file = open("answers.txt", "a")
+        file.write("\n")
+        file.close()
 
 
 if __name__ == "__main__":

@@ -298,6 +298,13 @@ def get_keywords_is(parse):
         if token.dep_ == "attr":
             property = get_blank(token, "attr")
 
+    if entity == "" or property == "":
+        for token in parse:
+            if token.dep_ == "compound":
+                entity = token.lemma_
+            if token.dep_ == "attr":
+                property = token.lemma_
+
     return property, entity, type
 
 
@@ -324,7 +331,7 @@ def get_keywords(line):
         return get_keywords_when(parse)
     if type == "Which":
         return get_keywords_which(parse)
-    if type == "Is":
+    if type == "Is" or type == "Are":
         return get_keywords_is(parse)
 
     return get_keywords_what(parse)
@@ -481,20 +488,16 @@ def line_handler(line):
 
 
 def main():
-    # questions = my_questions()
-    # for line in questions:
-    #    print(line)
-
-    # for line in fileinput.input():
-    #    if line == "stop\n":
-    #        break
-    #    line_handler(line)
+    for line in fileinput.input():
+        if line == "stop\n":
+            break
+        line_handler(line)
 
     with open("all_questions.txt") as fl:
         file_contents = [x.rstrip() for x in fl]
 
     for line in file_contents:
-        if line.startswith("Is"):
+        if line.startswith("Is") or line.startswith("Are"):
             print(line)
             line_handler(line)
             print()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import requests
-import fileinput
+import sys
 import spacy
 import re
 
@@ -164,6 +164,47 @@ def get_keywords_what_does(parse):
     return property, entity, "What_does"
 
 
+def get_keywords_at_what(parse):
+    entity = ""
+    property = ""
+    found_entity = False
+
+    for token in parse:
+        if (token.dep_ == "dobj" or token.pos_ == "VERB") and found_entity:
+            property = token.lemma_
+
+        if (token.dep_ == "nsubj" or token.dep_ == "compound" or token.pos_ == "VERB") and found_entity == False:
+            entity = get_blank(token, token.dep_)
+            found_entity = True
+
+    return property, entity, "At what"
+
+
+def get_keywords_in_what(parse):
+    entity = ""
+    property = ""
+    found_place = False
+
+    for token in parse:
+        if token.text == "city" or token.text == "country" or token.text == "place":
+            property = token.text
+            found_place = True
+
+        if token.pos_ == "VERB" or (token.pos_ == "NOUN" and token.dep_ == "ROOT"):
+            if token.lemma_ != "hold":
+                property = token.lemma_
+            if token.text == "born":
+                property = "date of birth"
+            if token.text == "die":
+                property = "date of death"
+            if token.text == "born" and found_place:
+                property = "place of birth"
+            if token.text == "die" and found_place:
+                property = "place of death"
+
+    return property, entity, "In what"
+
+
 def get_keywords_where(parse):
     entity = ""
     property = ""
@@ -187,7 +228,7 @@ def get_keywords_where(parse):
                     property = token.text
                 if property == "locate":
                     property = "location"
-        if property == "":
+        if property == "" or property == "study":
             property = "educated at"
 
     return property, entity, "Where"
@@ -287,6 +328,19 @@ def get_keywords_how(parse):
     return property, entity, type
 
 
+def get_keywords_name(parse):
+    entity = ""
+    property = ""
+    for token in parse:
+        # Als de zin begint met Name
+        if token.dep_ == "pobj":
+            entity = get_blank(token, "pobj")
+        if token.dep_ == "dobj":
+            property = get_blank(token, "dobj")
+
+    return property, entity, "Name"
+
+
 def get_keywords_is(parse):
     type = "Is"
     entity = ""
@@ -335,6 +389,12 @@ def get_keywords(line):
         return get_keywords_is(parse)
     if type == "Did":
         return 0, 0, "yes"
+    if type == "At":
+        return get_keywords_at_what(parse)
+    if type == "In":
+        return get_keywords_in_what(parse)
+    if type == "Name":
+        return get_keywords_name(parse)
 
     return get_keywords_what(parse)
 
@@ -503,19 +563,17 @@ def line_handler(line):
 
 
 def main():
-    with open("questionFormat.txt") as fl:
-        file_contents = [x.rstrip() for x in fl]
-
-    for line in file_contents:
-        number = line.split()[0]
-        new_line = re.sub(r'\d+ +', '', line)
-        file = open("answers.txt", "a")
-        file.write(number)
-        file.close()
-        line_handler(new_line)
-        file = open("answers.txt", "a")
-        file.write("\n")
-        file.close()
+    for line in sys.stdin:
+        if line != "\n":
+            number = line.split()[0]
+            new_line = re.sub(r'\d+ +', '', line)
+            file = open("answers.txt", "a")
+            file.write(number)
+            file.close()
+            line_handler(new_line)
+            file = open("answers.txt", "a")
+            file.write("\n")
+            file.close()
 
 
 if __name__ == "__main__":

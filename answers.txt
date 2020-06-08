@@ -1,0 +1,381 @@
+1
+2
+3
+4    fictional humanoid
+5    no
+6    no
+7    no
+8    no
+9    yes
+10
+11
+12
+13    146
+14    1064.18
+15
+16
+17    fictional humanoid
+18
+19
+20    yes
+21    yes
+22
+23
+24
+25
+26    first-order metaclass
+27    Mammalia
+28
+29
+30    0.00124861704    79
+31    100000
+32    scientific article
+33
+34    880000000000000000000000
+35    amputation
+36    Psilocybe semilanceata    intoxication
+37    spring    helix
+38
+39    2200    7500
+40    1954-06-07T00:00:00Z
+41    11.29
+42
+43    bulb
+44    black-and-white
+45    4.36
+46    54600000    401000000
+47
+48    1
+49    356565    406464
+50    356565    406464
+51    120
+52    1.0014
+53    73.477
+54    1    1988550000
+55    100
+56    5772    5000000    15700000
+57
+58    5772    5000000    15700000
+59
+60    joule
+61
+62    spring    helix
+63    metre per second
+64    7
+65    1384
+66
+67    880000000000000000000000
+68
+69    chocolate bar
+70    Saturn
+71    Mercury
+72
+73
+74    Impossible Princess
+75
+76
+77    0
+78
+79    1
+80    17
+81    1
+82    0
+83    0
+84    0
+85    11
+86    0
+87    7
+88    0
+89    0
+90    1
+91    0
+92    0
+93    0
+94    0
+95    0
+96    0
+97    8
+98    0
+99    0
+100    0
+101    0
+102    0
+103    0
+104    2051
+105    2
+106    0
+107    1
+108    0
+109    0
+110    12
+111    12
+112    12
+113    12
+114    1
+115    1
+116    11
+117    1
+118
+119
+120    13.05
+121    5972.37
+122
+123    1    1988550000
+124
+125
+126
+127
+128    1812-01-01T00:00:00Z
+129
+130    -4540000000-01-01T00:00:00Z
+131    -4540000000-01-01T00:00:00Z
+132    1969-01-01T00:00:00Z
+133    -4527000000-01-01T00:00:00Z
+134    1982-02-24T00:00:00Z
+135    Star Trek multiverse
+136
+137
+138
+139    Where We Are
+140    4
+141    5772    5000000    15700000
+142
+143    880000000000000000000000
+144
+145    Geneva
+146
+147    United States of America
+148
+149
+150
+151    1854-01-01T00:00:00Z
+152    Geneva
+153
+154    The Black Album
+155
+156
+157    1854-01-01T00:00:00Z
+158
+159
+160
+161
+162
+163
+164    province of Milan    Metropolitan City of Milan
+165    Italy
+166    province of Milan    Metropolitan City of Milan
+167    Geneva
+168
+169    Kim Stanley Robinson    Ursula K. Le Guin    George R. R. Martin    Orson Scott Card    Pat Murphy    Peter Straub    Joe Hill    Michael Swanwick    Elizabeth Hand    Karl Edward Wagner    Ian R. MacLeod    John Crowley    K. J. Parker    Robert Holdstock    S. P. Somtow    Geoff Ryman    Jeff VanderMeer
+170
+171
+172    no
+173    no
+174    yes
+175    no
+176    yes
+177    yes
+178    no
+179    yes
+180    no
+181    no
+182    yes
+183    no
+184    no
+185    no
+186
+187
+188
+189
+190
+191
+192    Johann Euler    Christoph Euler    Carl Euler
+193    East Africa
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203    concept in semantic linked data
+204    biological selection
+205
+206    71492
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220    homosexuality
+221
+222    English
+223
+224    differential calculus    integral calculus
+225    life    organism
+226    headache    anemia    fatigue    cough    fever    diarrhea    hypoxia    conjunctivitis    abdominal pain    nausea    dyspnea    anorexia    acute respiratory distress syndrome    anosmia    myalgia    lymphopenia    brain diseases    ageusia    hemoptysis    respiratory failure    chills    viral pneumonia    nasal congestion    influenza like illness
+227    headache    fatigue    fever    myalgia    runny nose
+228
+229    argon    carbon dioxide    water vapor    dinitrogen    dioxygen
+230    nervous system    nervous tissue
+231
+232
+233    flood    rogue wave
+234
+235
+236
+237
+238    cognitive psychology    working memory
+239
+240
+241
+242    Mars, Incorporated
+243    Finnish
+244    Mars, Incorporated
+245    Mars, Incorporated
+246
+247
+248    220-NCOS-26
+249    root    plant stem    germ layer    True leaf
+250    Solar System    inner and outer Solar System
+251    intestine
+252    respiratory system
+253    Sagittarius A*
+254
+255    Phobos    Deimos
+256    impulsivity    hyperfocus    emotional dysregulation    executive dysfunction    rejection sensitive dysphoria
+257    glare    visual impairment    diplopia
+258    headache    fatigue    fever    myalgia    runny nose
+259    cough    fever    tinnitus    itch    snoring    catarrh    runny nose    sore throat    balance disorder    dizziness
+260    headache    fatigue    fever    myalgia    runny nose
+261    headache    fatigue    fever    vomiting    cyanosis    bradycardia
+262
+263
+264
+265
+266
+267
+268
+269
+270    a group of permanent movement disorders that appear in early childhood
+271
+272
+273
+274    United States of America
+275    meteorological phenomenon caused by reflection, refraction and dispersion of light in water droplets
+276
+277
+278
+279
+280
+281
+282
+283    atom    covalent bond
+284    humanity
+285    red blood cell    white blood cell    blood plasma    platelets
+286    deoxyribonucleic acid, DNA Oyj
+287    LCD, LCD panel, LCD screen, liquid crystal display
+288
+289    snowflake
+290
+291
+292    NASA
+293    shortest path problem    pathfinding
+294
+295    mitochondrial DNA    mitochondrial crista    mitochondrial matrix    mitochondrial outer membrane    mitochondrial inner membrane
+296    speed
+297
+298    WiFi, Wi Fi
+299
+300
+301    Animalia
+302
+303
+304
+305
+306    obesity    atherosclerosis
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319    scientific article
+320
+321
+322    electrically excitable cell
+323    scientific journal article
+324    English
+325
+326
+327
+328
+329
+330    molecule that encodes the genetic instructions used in the development and functioning of all known living organisms and many viruses
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348    Tylenol    Ofirmev    Midol Long Lasting Relief    Mapap
+349
+350
+351
+352    positron
+353    antihydrogen
+354    antiquark
+355    65.38
+356    48
+357    6
+358    79
+359    1
+360    26
+361    8
+362    47
+363    16
+364    40
+365    92
+366
+367
+368    79    173
+369    2861
+370    674
+371    100
+372
+373
+374
+375    Damascus
+376    Bacillus anthracis    anthrax toxin
+377    COVID-19 pandemic    COVID-19
+378
+379
+380    0.00000000000000000016021766208    1
+381381381381

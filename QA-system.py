@@ -454,10 +454,12 @@ def execute_query(prop, entity, type):
         return 0
 
     file = open("answers.txt", "a")
-
+    print(query)
     for item in data['results']['bindings']:
         for var in item:
-            file.write("    " + item[var]['value'])
+            value = item[var]['value']
+            print(value)
+            file.write("    " + value)
     file.close()
     return 1
 
@@ -498,6 +500,55 @@ def yes_no_query_handler(prop, entity):
     file.close()
 
 
+def execute_how_many_query(prop, entity, type):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    }
+    url = 'https://query.wikidata.org/sparql'
+    query = generate_query(prop, entity, type)
+    data = requests.get(url, headers=headers, params={'query': query, 'format': 'json'}).json()
+
+    if not data['results']['bindings']:
+        return "0"
+
+    answers = []
+    for item in data['results']['bindings']:
+        for var in item:
+            answers.append(item[var]['value'])
+
+    if len(answers) == 1:
+        answer = answers[0]
+        if answer.isnumeric():
+            return answer
+        return "1"
+
+    return str(len(answers))
+
+
+def how_many_query_handler(prop, entity):
+    propIDs = 0
+    entityIDs = 0
+    if prop != "":
+        propIDs = get_id(prop, True)
+    if entity != "":
+        entityIDs = get_id(entity, False)
+
+    if propIDs != 0 and entityIDs != 0:
+        for entityID in entityIDs:
+            for propID in propIDs:
+                answer = execute_how_many_query(propID['id'], entityID['id'], "rest")
+                if answer != "0":
+                    break
+            if answer != "0":
+                break
+    else:
+        answer = "0"
+
+    file = open("answers.txt", "a")
+    file.write("    " + answer)
+    file.close()
+
+
 # This function gets an array of possible IDs and tries to get answers with them.
 # It will keep trying new IDs until it gets an answer or until there are no more possible IDs.
 def line_handler(line):
@@ -512,6 +563,10 @@ def line_handler(line):
 
     if type == "Is":
         yes_no_query_handler(prop, entity)
+        return
+
+    if type == "How many":
+        how_many_query_handler(prop, entity)
         return
 
     propIDs = 0
@@ -574,6 +629,8 @@ def main():
             file = open("answers.txt", "a")
             file.write("\n")
             file.close()
+        else:
+            break
 
 
 if __name__ == "__main__":

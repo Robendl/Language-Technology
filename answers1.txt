@@ -1,0 +1,939 @@
+1
+2
+3
+4    fictional humanoid
+5    no
+6    no
+7    no
+8    no
+9    yes
+10
+11
+12
+13    146
+14    1064.18
+15
+16
+17    fictional humanoid
+18
+19
+20    yes
+21    yes
+22
+23
+24
+25
+26    first-order metaclass
+27    Mammalia
+28
+29
+30    0.00124861704    79
+31    100000
+32    scientific article
+33
+34    880000000000000000000000
+35    amputation
+36    Psilocybe semilanceata    intoxication
+37    spring    helix
+38
+39    2200    7500
+40    1954-06-07T00:00:00Z
+41    11.29
+42
+43    bulb
+44    black-and-white
+45    4.36
+46    54600000    401000000
+47
+48    1
+49    356565    406464
+50    356565    406464
+51    120
+52    1.0014
+53    73.477
+54    1    1988550000
+55    100
+56    5772    5000000    15700000
+57
+58    5772    5000000    15700000
+59
+60    joule
+61
+62    spring    helix
+63    metre per second
+64    7
+65    1384
+66
+67    880000000000000000000000
+68
+69    chocolate bar
+70    Saturn
+71    Mercury    Mercury-Gémilly
+72
+73
+74    Impossible Princess
+75
+76
+77    0
+78
+79    1
+80    17
+81    1
+82    0
+83    0
+84    0
+85    11
+86    0
+87    7
+88    0
+89    0
+90    1
+91    0
+92    0
+93    0
+94    0
+95    0
+96    0
+97    8
+98    0
+99    0
+100    0
+101    0
+102    0
+103    0
+104    2051
+105    2
+106    0
+107    1
+108    0
+109    0
+110    12
+111    12
+112    12
+113    12
+114    1
+115    1
+116    11
+117    1
+118
+119
+120    13.05
+121    5972.37
+122
+123    1    1988550000
+124
+125
+126
+127
+128    1812-01-01T00:00:00Z
+129
+130    -4540000000-01-01T00:00:00Z
+131    -4540000000-01-01T00:00:00Z
+132    1969-01-01T00:00:00Z
+133    -4527000000-01-01T00:00:00Z
+134    1982-02-24T00:00:00Z
+135    Star Trek multiverse
+136
+137
+138
+139    Where We Are
+140    4
+141    5772    5000000    15700000
+142
+143    880000000000000000000000
+144
+145    Geneva
+146
+147    United States of America
+148
+149
+150
+151    1854-01-01T00:00:00Z
+152    Geneva
+153
+154    The Black Album
+155
+156
+157    1854-01-01T00:00:00Z
+158
+159
+160
+161
+162
+163
+164    province of Milan    Metropolitan City of Milan
+165    Italy
+166    province of Milan    Metropolitan City of Milan
+167    Geneva
+168
+169    Kim Stanley Robinson    Ursula K. Le Guin    George R. R. Martin    Orson Scott Card    Pat Murphy    Peter Straub    Joe Hill    Michael Swanwick    Elizabeth Hand    Karl Edward Wagner    Ian R. MacLeod    John Crowley    K. J. Parker    Robert Holdstock    S. P. Somtow    Geoff Ryman    Jeff VanderMeer    Zoran Živković    Mark Helprin    Jeffrey Ford    Garry Kilworth    Parke Godwin    Daryl Gregory    Andy Duncan    Ellen Klages    Greer Gilman    Laurel Winter    Michael Shea    Richard Bowes    Steve Rasnic Tem    T. E. D. Klein    Margo Lanagan    Melanie Tem
+170
+171
+172    no
+173    no
+174    yes
+175    no
+176    yes
+177    yes
+178    no
+179    yes
+180    no
+181    no
+182    yes
+183    no
+184    no
+185    no
+186
+187
+188
+189
+190
+191
+192    Johann Euler    Christoph Euler    Carl Euler
+193    East Africa
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203    concept in semantic linked data
+204    biological selection
+205
+206    71492
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220    homosexuality
+221
+222    English
+223
+224    differential calculus    integral calculus
+225    life    organism
+226    headache    anemia    fatigue    cough    fever    diarrhea    hypoxia    conjunctivitis    abdominal pain    nausea    dyspnea    anorexia    acute respiratory distress syndrome    anosmia    myalgia    lymphopenia    brain diseases    ageusia    hemoptysis    respiratory failure    chills    viral pneumonia    nasal congestion    influenza like illness
+227    headache    fatigue    fever    myalgia    runny nose
+228
+229    argon    carbon dioxide    water vapor    dinitrogen    dioxygen
+230    nervous system    nervous tissue
+231
+232
+233    flood    rogue wave
+234
+235
+236
+237
+238    cognitive psychology    working memory
+239
+240
+241
+242    Mars, Incorporated
+243    Finnish
+244    Mars, Incorporated
+245    Mars, Incorporated
+246
+247
+248    220-NCOS-26
+249    root    plant stem    germ layer    True leaf
+250    Solar System    inner and outer Solar System
+251    intestine
+252    respiratory system
+253    Sagittarius A*
+254
+255    Phobos    Deimos
+256    impulsivity    hyperfocus    emotional dysregulation    executive dysfunction    rejection sensitive dysphoria
+257    glare    visual impairment    diplopia
+258    headache    fatigue    fever    myalgia    runny nose
+259    cough    fever    tinnitus    itch    snoring    catarrh    runny nose    sore throat    balance disorder    dizziness
+260    headache    fatigue    fever    myalgia    runny nose
+261    headache    fatigue    fever    vomiting    cyanosis    bradycardia
+262
+263
+264
+265
+266
+267
+268
+269
+270    a group of permanent movement disorders that appear in early childhood
+271
+272
+273
+274    United States of America
+275    meteorological phenomenon caused by reflection, refraction and dispersion of light in water droplets
+276
+277
+278
+279
+280
+281
+282
+283    atom    covalent bond
+284    humanity
+285    red blood cell    white blood cell    blood plasma    platelets
+286    deoxyribonucleic acid, DNA Oyj
+287    LCD, LCD panel, LCD screen, liquid crystal display
+288
+289    snowflake
+290
+291
+292    NASA
+293    shortest path problem    pathfinding
+294
+295    mitochondrial DNA    mitochondrial crista    mitochondrial matrix    mitochondrial outer membrane    mitochondrial inner membrane
+296    speed
+297
+298    WiFi, Wi Fi
+299
+300
+301    Animalia
+302
+303
+304
+305
+306    obesity    atherosclerosis
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319    scientific article
+320
+321
+322    electrically excitable cell
+323    scientific journal article
+324    English
+325
+326
+327
+328
+329
+330    molecule that encodes the genetic instructions used in the development and functioning of all known living organisms and many viruses
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348    Tylenol    Ofirmev    Midol Long Lasting Relief    Mapap
+349
+350
+351
+352    positron
+353    antihydrogen
+354    antiquark
+355    65.38
+356    48
+357    6
+358    79
+359    1
+360    26
+361    8
+362    47
+363    16
+364    40
+365    92
+366
+367
+368    79    173
+369    2861
+370    674
+371    100
+372
+373
+374
+375    Damascus
+376    Bacillus anthracis    anthrax toxin
+377    COVID-19 pandemic    COVID-19
+378
+379
+380    0.00000000000000000016021766208    1
+381    C₈H₁₁NO₂
+382    C₂H₆O
+383    C₉H₈O₄
+384    C₆H₆
+385    C₆H₁₂O₆
+386    C₆H₁₂O₆
+387    Au
+388    C₁₃H₁₈O₂
+389    Mg
+390    O₃
+391    C₈H₉NO₂
+392    Si
+393    H₂O
+394    C₁₈H₂₂O₂
+395    H₂O
+396    http://commons.wikimedia.org/wiki/Special:FilePath/H2O%202D%20labelled.svg
+397    30
+398
+399    1643-01-04T00:00:00Z
+400
+401    492094
+402
+403    0.9167
+404
+405
+406
+407
+408    0.00124861704    79
+409    12742
+410    0.00124861704    79
+411    880000000000000000000000
+412    0
+413    0
+414    0
+415    0
+416    38
+417
+418    thermal energy
+419
+420    20
+421    3
+422    Au
+423    He
+424    Hg
+425    Ag
+426    S
+427    -10984
+428
+429
+430
+431    particle physics    high energy physics
+432
+433    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" alttext="{\displaystyle v=s/t}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+        <mo>=</mo>
+        <mi>s</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>t</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v=s/t}</annotation>
+  </semantics>
+</math>
+434
+435
+436
+437
+438    64
+439
+440    704000000
+441    150
+442    4
+443
+444    Mont Blanc
+445
+446    Olympus Mons
+447
+448
+449
+450    Inner Solar System
+451
+452
+453    Challenger Deep
+454
+455    133
+456    206.131
+457    55.935
+458    207.2    207.977
+459
+460
+461    1200000000000
+462    73.477
+463    1.0014
+464    1    1988550000
+465    1    1988550000
+466
+467    6    42
+468    47
+469    128
+470    1064.18
+471
+472    -458    -272.05    0.95
+473    1538    1811
+474
+475
+476
+477    0
+478
+479
+480
+481
+482
+483    Finnish
+484    Finnish
+485    Guido
+486    English
+487    Belgické království    Königreich Belgien    Kingdom of Belgium    Royaume de Belgique    Koninkrijk België
+488    English
+489    Derek    William
+490    Saturn
+491    English
+492
+493
+494
+495
+496    3.141592653589793238462643383
+497
+498    https://www.amd.com/
+499
+500    white hole
+501    herbivore
+502    autosomal recessive
+503    Ethernet
+504    51.6
+505    4332.589
+506    365.256363004
+507    27.321661
+508
+509    WORD
+510    24901    40075
+511    Ulm
+512
+513    685900
+514    7655957369
+515
+516    6371    6378.137
+517    1    696000
+518
+519    smoking
+520
+521
+522
+523
+524
+525
+526    geoid
+527
+528
+529    6700000
+530
+531    299792458
+532
+533
+534
+535
+536
+537
+538    formula
+539
+540
+541    1.62
+542
+543    Canis lupus
+544    Oncorhynchus tshawytscha
+545    Panthera leo
+546    Panthera leo
+547
+548    0
+549    5772    5000000    15700000
+550    5772    5000000    15700000
+551    -63
+552
+553
+554    0.56
+555
+556
+557
+558
+559    political concept    sociological concept
+560
+561
+562    https://ted.com
+563
+564
+565
+566
+567    wireless local area network based on IEEE's 802.11 standards
+568    spectacle
+569    rock music
+570
+571    gravity    strong interaction    weak interaction    electromagnetic force
+572    action film    disaster film    thriller film
+573
+574    host-plants/plantae    parasites/plantae-parasites
+575
+576
+577
+578
+579
+580    computer keyboard    computer case    video card    motherboard    computer monitor    central processing unit    mouse    Central Unit    power supply    computer memory    primary memory
+581    21
+582    spectacle
+583
+584    Sagittarius A*
+585    Sagittarius A*
+586
+587
+588    English
+589
+590    1634-01-01T00:00:00Z
+591
+592    Felis silvestris catus
+593
+594
+595
+596
+597
+598
+599
+600    taxon
+601    state of matter
+602    precept    delimitation
+603
+604    taxon
+605    Wikimedia list article
+606    square pyramidal number    natural number    Fibonacci number    square number    numeral    power of 10    centered triangular number    centered pentagonal number    centered cube number    centered hexagonal number    centered square number    triangular number    heptagonal pyramidal number    decagonal number    pentagonal number    fourth power    cube    centered heptagonal number    heptagonal number    tetrahedral number    dodecagonal number    power of two    hexagonal number    Repunit    pentatope number    centered nonagonal number    centered decagonal number    centered octagonal number    dimensionless unit    square triangular number    hexagonal pyramidal number    unit    automorphic number    star number    octagonal number    nonagonal number    pentagonal pyramidal number    stella octangula number    Mersenne number    5th power    odd number    icosahedral number    dodecahedral number    centered tetrahedral number    centered octahedral number    centered dodecahedral number    centered icosahedral number    centered pentachoric number    non-negative integer    sixth power    seventh power    power of 1000    multiplicative identity    coherent SI unit    eighth power    Q91025251
+607
+608    Trinity College    The King's School, Grantham
+609
+610
+611
+612
+613
+614
+615    stab wound
+616
+617    theoretical physics
+618
+619    Moon landing
+620
+621    vegetarianism
+622    philosopher
+623
+624    1975-11-01T00:00:00Z
+625    Poland    France    Russian Empire
+626    mathematician    philosopher
+627    Sun
+628    1918-01-01T00:00:00Z
+629
+630    1976-04-01T00:00:00Z
+631    1922-08-02T00:00:00Z
+632
+633
+634    2020-04-11T00:00:00Z
+635
+636
+637
+638    occurrence    unmoved mover    Cosmological model    big bang
+639
+640
+641    1977-01-01T00:00:00Z
+642
+643
+644    Teenage Mutant Ninja Turtles
+645    -13798000000-01-01T00:00:00Z
+646
+647    1876-01-01T00:00:00Z
+648    1912-06-23T00:00:00Z
+649    1879-03-14T00:00:00Z
+650    1936-01-01T00:00:00Z
+651    1946-06-14T00:00:00Z
+652    -4540000000-01-01T00:00:00Z
+653    1879-03-14T00:00:00Z
+654    -6000-01-01T00:00:00Z
+655
+656    1643-01-04T00:00:00Z
+657    1867-11-07T00:00:00Z
+658    1963-01-01T00:00:00Z
+659    1908-03-13T00:00:00Z
+660    1771-01-01T00:00:00Z    1774-01-01T00:00:00Z
+661    1928-09-28T00:00:00Z
+662    1928-09-28T00:00:00Z
+663    1928-09-28T00:00:00Z
+664    1930-02-18T00:00:00Z
+665
+666    1930-02-18T00:00:00Z
+667    1941-01-01T00:00:00Z
+668    1643-01-04T00:00:00Z
+669
+670
+671    1958-01-01T00:00:00Z
+672    1842-01-01T00:00:00Z
+673
+674
+675
+676
+677
+678
+679
+680
+681    2012-01-01T00:00:00Z
+682    2009-12-10T00:00:00Z
+683
+684
+685    1998-11-20T00:00:00Z
+686    1969-01-01T00:00:00Z
+687
+688
+689    1901-01-01T00:00:00Z
+690    2008-01-01T00:00:00Z
+691    1954-12-15T00:00:00Z
+692    Isaac Newton
+693    3.8.3    3.9.0b1
+694    1876-01-01T00:00:00Z
+695    Hans Lippershay
+696    1947-12-01T00:00:00Z
+697
+698
+699    1781-03-13T00:00:00Z
+700
+701
+702
+703    1957-01-01T00:00:00Z
+704
+705
+706
+707    Smiljan
+708
+709    1955-04-18T00:00:00Z
+710    1955-04-18T00:00:00Z
+711
+712    Uppsala University    Lund University    University of Harderwijk
+713
+714
+715    1931-10-18T00:00:00Z
+716    Korean
+717    Germany
+718
+719    Maida Vale    Guildford
+720
+721
+722    ohm
+723    Mountain View
+724    University of Edinburgh    University College London    Royal High School
+725    Auckland Art Gallery
+726    Milan
+727
+728    Point(4.506388888 47.463333333)
+729    Sappemeer
+730
+731    Saint Petersburg State University    Saint Petersburg State Institute of Technology    Main Pedagogical Institute
+732    Hynčice
+733    Helmond
+734    Smiljan
+735    Oxford
+736
+737
+738
+739    2008-10-21T00:00:00Z
+740    Oak Ridge
+741    1958-01-01T00:00:00Z
+742
+743
+744    hepatic artery proper
+745
+746    Order of the British Empire    Royal Society    Smith's Prize    Officer of the Order of the British Empire    Fellow of the Royal Society
+747
+748
+749
+750    mathematics    logic    cryptography    computer science    cryptanalysis
+751    Albania
+752    fluorouracil    vemurafenib    imiquimod    ingenol mebutate    vismodegib    ipilimumab    dabrafenib
+753
+754    1920-08-21T00:00:00Z
+755    medication    solvent    food ingredient
+756    astronomy    mathematics    physics    mechanics
+757    Musa    Musa × paradisiaca
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768    profession
+769
+770
+771
+772
+773    American Journal of Obstetrics and Gynecology
+774    host-plants/plantae    parasites/plantae-parasites
+775    nervous system    nervous tissue
+776    1786
+777
+778    Sagittarius A*
+779
+780
+781
+782
+783    Twitter
+784    neuroscience
+785
+786
+787    spring    helix
+788    1976-05-31T00:00:00Z
+789
+790
+791
+792
+793
+794
+795
+796    Eduard Einstein    Hans Albert Einstein    Lieserl Einstein
+797    Eduard Einstein    Hans Albert Einstein    Lieserl Einstein
+798    Neil Armstrong    Buzz Aldrin    Michael Collins
+799    Steve Jobs    Ronald Wayne    Steve Wozniak
+800    Larry Page    Sergey Brin
+801    Bill Gates    Paul G. Allen
+802    Jen-Hsun Huang    Chris Malachowsky    Curtis Priem
+803    Geoffrey Hinton    Yann LeCun
+804
+805    Alexander Graham Bell    Johann Philipp Reis    Antonio Meucci    Elisha Gray
+806    Tim Berners-Lee    Robert Cailliau
+807
+808
+809
+810
+811
+812
+813    Albert Einstein    Max Planck    Erwin Schrödinger    John von Neumann    Werner Heisenberg    Paul Dirac    Max Born    Pascual Jordan    Wolfgang Pauli    Louis de Broglie
+814    John Backus
+815    Ronaldo Caiado
+816
+817    Albert Einstein
+818    Albert Einstein
+819
+820    Heinrich Rudolf Hertz
+821
+822    Alexander Fleming
+823    Marie Curie    Pierre Curie
+824    Marie Curie    Pierre Curie
+825    Albert Einstein
+826
+827    subatomic particle with negative electric charge
+828
+829
+830    Alexander Fleming
+831    Klaus von Klitzing
+832    Charles Darwin
+833    Albert Einstein
+834    William Herschel
+835    system of alternative medicine based on the doctrine of "like cures like"
+836    Alfred Nobel
+837    Steve Jobs    Ronald Wayne    Steve Wozniak
+838    Steve Jobs    Ronald Wayne    Steve Wozniak
+839    Leland Stanford    Jane Stanford
+840    subatomic particle with negative electric charge
+841
+842
+843    Arthur Samuel    Alexander Brudno
+844
+845    Alexander Fleming
+846    An interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.
+847    Ferdinand Verbiest
+848
+849    John Horton Conway
+850    John Horton Conway
+851    Thomas Alva Edison    Joseph Swan
+852    Bob Kahn    Vint Cerf
+853    Hans Lippershay    Zacharias Janssen
+854    Dmitri Mendeleev
+855    Bartolomeo Cristofori
+856    Jonas Salk
+857
+858
+859    René Laennec
+860    Alexander Graham Bell    Johann Philipp Reis    Antonio Meucci    Elisha Gray
+861    John Logie Baird
+862
+863
+864
+865
+866
+867    Lisa Su
+868    Alexander Fleming
+869
+870
+871
+872
+873    António Egas Moniz
+874    Ferdinand Verbiest
+875    Eric Walter Elst
+876    Felix Wankel
+877    Hannah Ayscough
+878
+879
+880
+881
+882    Alan Turing
+883
+884
+885
+886
+887    German-born physicist; developer of the theory of relativity
+888
+889    Albert Einstein
+890    Albert Einstein
+891
+892    Hermann Einstein
+893
+894
+895
+896
+897
+898
+899    Alexander Fleming
+900
+901
+902
+903
+904    Albert Einstein    Max Planck    Erwin Schrödinger    John von Neumann    Werner Heisenberg    Paul Dirac    Max Born    Pascual Jordan    Wolfgang Pauli    Louis de Broglie
+905    Neil Armstrong    Buzz Aldrin    Michael Collins
+906
+907
+908    Barack Obama Sr.
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
+919    Thomas Hobbes
+920
+921
+922
+923
+924    nervous system

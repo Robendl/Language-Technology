@@ -38,7 +38,7 @@ def get_blank(token, type):
     return " ".join(part)
 
 
-# returns the type of part of the sentence that is required
+# Checks if we can find keywords using regex for certain specific sentences.
 def check_regex_sentences(line):
     property = ""
     entity = ""
@@ -144,7 +144,6 @@ def get_keywords_what(parse):
     return property, entity, "What"
 
 
-# For example What does DNA consist of?/ What does the Dijkstra algorithm solve?
 def get_keywords_what_does(parse):
     entity = ""
     property = ""
@@ -359,7 +358,7 @@ def get_keywords_is(parse):
     return property, entity, type
 
 
-# finds the keywords for 3 different kinds of sentences
+# Calls functions that are made for sentences that start with certain words.
 def get_keywords(line):
     nlp = spacy.load('en_core_web_sm')
     parse = nlp(line.strip())
@@ -381,7 +380,7 @@ def get_keywords(line):
         return get_keywords_which(parse)
     if type == "Is" or type == "Are" or type == "Were" or type == "Was":
         return get_keywords_is(parse)
-    if type == "Did":
+    if type == "Did" or type == "Have":
         return 0, 0, "yes"
     if type == "At":
         return get_keywords_at_what(parse)
@@ -393,6 +392,7 @@ def get_keywords(line):
     return get_keywords_what(parse)
 
 
+# Generates queries for certain types
 def generate_query(prop, entity, type):
     # If first_word is of type "who".
     if (type == "Who"):
@@ -435,7 +435,7 @@ def generate_query(prop, entity, type):
     return query
 
 
-# generates a query and executes it, returns false if it didn't print an answer and true if it did.
+# generates a query and executes it, returns 0 if it didn't find an answer.
 def execute_query(prop, entity, type):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
@@ -458,6 +458,7 @@ def execute_query(prop, entity, type):
     return 1
 
 
+# Returns False if there is no answer, True if there is.
 def execute_yes_no_query(prop, entity):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
@@ -471,6 +472,7 @@ def execute_yes_no_query(prop, entity):
     return True
 
 
+# Writes 'yes' if an answer is found, 'no' if not.
 def yes_no_query_handler(prop, entity):
     propIDs = 0
     entityIDs = 0
@@ -494,6 +496,8 @@ def yes_no_query_handler(prop, entity):
     file.close()
 
 
+# Counts number of answers, if the count is 1 it checks if the value is a number, if it is it returns the number.
+# Otherwise it returns the count.
 def execute_how_many_query(prop, entity, type):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
@@ -519,6 +523,8 @@ def execute_how_many_query(prop, entity, type):
     return str(len(answers))
 
 
+# Creates queries and handles answer for 'how many' questions, keeps going until it finds an answer that's not 0 or
+# when there is nothing left to try.
 def how_many_query_handler(prop, entity):
     propIDs = 0
     entityIDs = 0
@@ -527,6 +533,7 @@ def how_many_query_handler(prop, entity):
     if entity != "":
         entityIDs = get_id(entity, False)
 
+    answer = 0
     if propIDs != 0 and entityIDs != 0:
         for entityID in entityIDs:
             for propID in propIDs:
@@ -543,6 +550,7 @@ def how_many_query_handler(prop, entity):
     file.close()
 
 
+# If nothing works and we don't have an answer we try every combination of tokens with certain pos_ values.
 def try_everything(line):
     nlp = spacy.load('en_core_web_sm')
     parse = nlp(line.strip())
@@ -562,22 +570,21 @@ def try_everything(line):
                                 return
 
 
-# This function gets an array of possible IDs and tries to get answers with them.
-# It will keep trying new IDs until it gets an answer or until there are no more possible IDs.
+# Gets keywords from the line and tries to every combination of IDs. There are some exceptions
 def line_handler(line):
     prop, entity, type = get_keywords(line)
 
-    if type == "yes":
+    if type == "yes":   # just writes 'yes' for some yes/no questions
         file = open("answers.txt", "a", encoding="utf-8")
         file.write("    yes")
         file.close()
         return
 
-    if type == "Is":
+    if type == "Is":    # yes/no with is need different query handlers
         yes_no_query_handler(prop, entity)
         return
 
-    if type == "How many":
+    if type == "How many":  # How many questions need different query handlers
         how_many_query_handler(prop, entity)
         return
 
@@ -599,7 +606,6 @@ def line_handler(line):
                     return
 
     if answer == 0:
-        # bij sommige vragen moesten de woorden die als entity werden aangeschreven, property's worden en ook andersom. Om een goed antwoord te krijgen
         if entity != "":
             propIDs = get_id(entity, True)
         if prop != "":
@@ -639,8 +645,6 @@ def main():
             file = open("answers.txt", "a", encoding="utf-8")
             file.write("\n")
             file.close()
-        else:
-            break
 
 
 if __name__ == "__main__":

@@ -1,0 +1,33 @@
+144    Newark
+145    8123
+146    Ulm
+147    Belgium
+148    writer    anthropologist    philosopher    ethnobotanist
+149    physicist    chemist    university teacher    nuclear physicist
+150    Latin    English
+151    1958-07-29T00:00:00Z
+152    Geneva
+153    thermometer    kelvin    degree Celsius    degree Fahrenheit    degree
+154    2002 Euler
+155    1997-01-01T00:00:00Z
+156    1952-01-01T00:00:00Z
+157    1998-09-04T00:00:00Z
+158    1944-01-01T00:00:00Z
+159    1898-01-01T00:00:00Z
+160    1957-01-01T00:00:00Z
+161    1643-01-04T00:00:00Z
+162    1915-01-01T00:00:00Z
+163
+164    Ain    Canton of Geneva
+165    Flores Timur    Alor    Solor    Pantar    Konga
+166    GNU Find Utilities
+167    tissue    group of cells    multicellular structure
+168    1989-01-01T00:00:00Z
+169    Knight of the Legion of Honour
+170    1998-01-01T00:00:00Z
+171    1896-01-01T00:00:00Z
+312
+313
+314314314314    mTAbvaJIA_aGgozyEZWVnnZ27CC0iXcd
+312
+313

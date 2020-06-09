@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Made by Roben de Lange (s3799174), Julian Zwijghuizen (s3799492), Thomas Veldboer (s3686450), Thomas Tan (s3235289)
 
 import requests
 import sys

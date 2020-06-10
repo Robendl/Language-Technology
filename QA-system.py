@@ -454,7 +454,7 @@ def execute_query(prop, entity, type):
         for var in item:
             value = item[var]['value']
 
-            file.write("    " + value)
+            file.write("\t" + value)
     file.close()
     return 1
 
@@ -490,10 +490,10 @@ def yes_no_query_handler(prop, entity):
             for propID in propIDs:
                 answer = execute_yes_no_query(propID['id'], entityID['id'], )
                 if answer:
-                    file.write("    yes")
+                    file.write("\tyes")
                     file.close()
                     return
-    file.write("    no")
+    file.write("\tno")
     file.close()
 
 
@@ -547,7 +547,7 @@ def how_many_query_handler(prop, entity):
         answer = "0"
 
     file = open("answers.txt", "a", encoding="utf-8")
-    file.write("    " + answer)
+    file.write("\t" + answer)
     file.close()
 
 
@@ -577,7 +577,7 @@ def line_handler(line):
 
     if type == "yes":   # just writes 'yes' for some yes/no questions
         file = open("answers.txt", "a", encoding="utf-8")
-        file.write("    yes")
+        file.write("\tyes")
         file.close()
         return
 
@@ -638,7 +638,7 @@ def main():
     for line in sys.stdin:
         if line != "\n":
             number = line.split()[0]
-            new_line = re.sub(r'\d+ +', '', line)
+            new_line = re.sub(r'\d+\t', '', line)
             file = open("answers.txt", "a", encoding="utf-8")
             file.write(number)
             file.close()

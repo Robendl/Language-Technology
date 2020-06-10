@@ -1,50 +1,50 @@
-1    Richard S. Sutton
-2    organic chemistry    molecular nanotechnology
-3
-4    United States of America
-5
-6    1790-01-01T00:00:00Z
-7    1827-01-01T00:00:00Z
-8    -0211-01-01T00:00:00Z
-9    language designed to communicate instructions to a machine. Not to be confused with  "programming language implementation" (Q4117406)
-10    society    education    gender    social class    structure    social conflict    group action    work
-11    Fregetta tropica
-12    C    Python
-13    fictional humanoid
-14    Point(10.0 56.0)
-15    professor
+11	Richard S. Sutton
+2	organic chemistry	molecular nanotechnology
+3	hydrogen	oxygen	sulfur
+4	United States of America
+5	yes
+6	1790-01-01T00:00:00Z
+7	Robert Brown
+8	-0211-01-01T00:00:00Z
+9	yes
+10	no
+11	lichenologist
+12	C	Python
+13	Alfred Nobel
+14	Point(10.0 56.0)
+15	professor
 16
 17
-18
-19    pascal
-20    Christina of Saxony    Frederick III    Ernest II of Saxony    Adalbert III of Saxony    Margaret of Saxony, Duchess of Brunswick-Lüneburg
-21    0.0652
-22    mathematics    logic    cryptography    computer science    cryptanalysis
-23    National People's Congress of the People's Republic of China
-24    1624-01-01T00:00:00Z
-25    fictional humanoid
-26    male
-27    1.91
-28    headache    fatigue    fever    vomiting    cyanosis    bradycardia
-29    Commentariolus    De revolutionibus orbium coelestium    Copernican heliocentrism
+18	C++
+19	pascal
+20	3
+21	0.0652
+22	mathematics	logic	cryptography	computer science	cryptanalysis
+23	0
+24	1939-01-01T00:00:00Z
+25	Samuel Morse	Alfred Vail
+26	yes
+27	1.91
+28	headache	fatigue	fever	vomiting	cyanosis	bradycardia
+29	Commentariolus	De revolutionibus orbium coelestium	Copernican heliocentrism
 30
-31
-32    fictional humanoid
-33    Au
-34    Hans Wynberg
-35    1846-09-23T00:00:00Z
-36
-37    Scholarly Publishing and Academic Resources Coalition    Coalition for Networked Information    Digital Library Federation    LIGO Scientific Collaboration    DDI Alliance    IIIF Consortium
-38    Point(6.567 53.218527777)
+31	no
+32	Alan Turing
+33	Au
+34	Hans Wynberg
+35	1846-09-23T00:00:00Z
+36	0
+37	no
+38	Point(6.567 53.218527777)
 39
-40    fictional humanoid
-41    0
-42    mathematics    logic    cryptography    computer science    cryptanalysis
-43    fictional humanoid
-44    James
-45    5772    5000000    15700000
-46    declarative programming
-47    Calvinism
-48
-49    Switzerland    France
-50
+40	University of Groningen
+41	0
+42	mathematics	logic	cryptography	computer science	cryptanalysis
+43	Larry Wall
+44	James
+45	5772	5000000	15700000
+46	declarative programming
+47	Calvinism
+48	Felix Hoffmann	Arthur Eichengrün	Charles Frédéric Gerhardt
+49	Kingdom of the Netherlands
+50	New Haven

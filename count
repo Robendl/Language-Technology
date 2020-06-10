@@ -1,0 +1,8 @@
+def main():
+	f = open("answers1.txt", "r")
+	for line in f:
+		line = line.split()
+		print(line)
+	
+if __name__ == '__main__':
+	main()

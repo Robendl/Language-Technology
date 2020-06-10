@@ -1,4 +1,4 @@
-11	Richard S. Sutton
+1	Richard S. Sutton
 2	organic chemistry	molecular nanotechnology
 3	hydrogen	oxygen	sulfur
 4	United States of America

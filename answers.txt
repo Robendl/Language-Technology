@@ -1,123 +1,50 @@
-144    Newark
-145    8123
-146    Ulm
-147    Belgium
-148    writer    anthropologist    philosopher    ethnobotanist
-149    physicist    chemist    university teacher    nuclear physicist
-150    Latin    English
-151    1958-07-29T00:00:00Z
-152    Geneva
-153    thermometer    kelvin    degree Celsius    degree Fahrenheit    degree
-154    2002 Euler
-155    1997-01-01T00:00:00Z
-156    1952-01-01T00:00:00Z
-157    1998-09-04T00:00:00Z
-158    1944-01-01T00:00:00Z
-159    1898-01-01T00:00:00Z
-160    1957-01-01T00:00:00Z
-161    1643-01-04T00:00:00Z
-162    1915-01-01T00:00:00Z
-163
-164    Ain    Canton of Geneva
-165    Flores Timur    Alor    Solor    Pantar    Konga
-166    GNU Find Utilities
-167    tissue    group of cells    multicellular structure
-168    1989-01-01T00:00:00Z
-169    Knight of the Legion of Honour
-170    1998-01-01T00:00:00Z
-171    1896-01-01T00:00:00Z
-312
-313
-314314314314    mTAbvaJIA_aGgozyEZWVnnZ27CC0iXcd
-312
-313
-286    deoxyribonucleic acid, DNA Oyj
-287287    LCD, LCD panel, LCD screen, liquid crystal display
-287    LCD, LCD panel, LCD screen, liquid crystal display
-287    LCD, LCD panel, LCD screen, liquid crystal display
-286    deoxyribonucleic acid, DNA Oyj
-287    LCD, LCD panel, LCD screen, liquid crystal display
-288
-289    snowflake
-290
-291
-292    NASA
-293    shortest path problem    pathfinding
-294
-295    mitochondrial DNA    mitochondrial crista    mitochondrial matrix    mitochondrial outer membrane    mitochondrial inner membrane
-56    5772    5000000    15700000
-57    http://commons.wikimedia.org/wiki/Special:FilePath/Bois%20Sainte%20Anastasie%2C%20Yaound%C3%A9.JPG
-58    5772    5000000    15700000
-59    http://commons.wikimedia.org/wiki/Special:FilePath/The%20Sun%20by%20the%20Atmospheric%20Imaging%20Assembly%20of%20NASA%27s%20Solar%20Dynamics%20Observatory%20-%2020100819-02.jpg
-60    joule
-61
-62    spring    helix
-63    metre per second
-64    7
-65    1384
-66    1876699
-67    880000000000000000000000
-68
-69    chocolate bar
-70    Saturn
-71    Mercury    Mercury-Gémilly
-72    The Take
-73
-74    Impossible Princess
-75
-76    880000000000000000000000
-77    0
-78
-79    1
-80    17
-81    1
-82    0
-83    0
-84    0
-85    11
-86    0
-87    7
-88    0
-89    0
-90    1
-91    0
-92    0
-93    0
-94    0
-95    0
-96    0
-97    8
-98    0
-99    0
-100    0
-101    0
-102    0
-103    0
-104    2051
-105    2
-106    0
-107    1
-108    0
-109    0
-110    12
-111    12
-112    12
-113    12
-114    1
-115    1
-116    11
-117    1
-118
-119    male
-120    13.05
-121    5972.37
-122
-123    1    1988550000
-124    1860-07-24T00:00:00Z
-125
-126    James Rossant    Anne Tyng    Erik Schmidt-Schaller    William J Conklin
-127
-128    1812-01-01T00:00:00Z
-129    331
-130    -4540000000-01-01T00:00:00Z
-131
+1    Richard S. Sutton
+2    organic chemistry    molecular nanotechnology
+3
+4    United States of America
+5
+6    1790-01-01T00:00:00Z
+7    1827-01-01T00:00:00Z
+8    -0211-01-01T00:00:00Z
+9    language designed to communicate instructions to a machine. Not to be confused with  "programming language implementation" (Q4117406)
+10    society    education    gender    social class    structure    social conflict    group action    work
+11    Fregetta tropica
+12    C    Python
+13    fictional humanoid
+14    Point(10.0 56.0)
+15    professor
+16
+17
+18
+19    pascal
+20    Christina of Saxony    Frederick III    Ernest II of Saxony    Adalbert III of Saxony    Margaret of Saxony, Duchess of Brunswick-Lüneburg
+21    0.0652
+22    mathematics    logic    cryptography    computer science    cryptanalysis
+23    National People's Congress of the People's Republic of China
+24    1624-01-01T00:00:00Z
+25    fictional humanoid
+26    male
+27    1.91
+28    headache    fatigue    fever    vomiting    cyanosis    bradycardia
+29    Commentariolus    De revolutionibus orbium coelestium    Copernican heliocentrism
+30
+31
+32    fictional humanoid
+33    Au
+34    Hans Wynberg
+35    1846-09-23T00:00:00Z
+36
+37    Scholarly Publishing and Academic Resources Coalition    Coalition for Networked Information    Digital Library Federation    LIGO Scientific Collaboration    DDI Alliance    IIIF Consortium
+38    Point(6.567 53.218527777)
+39
+40    fictional humanoid
+41    0
+42    mathematics    logic    cryptography    computer science    cryptanalysis
+43    fictional humanoid
+44    James
+45    5772    5000000    15700000
+46    declarative programming
+47    Calvinism
+48
+49    Switzerland    France
+50
